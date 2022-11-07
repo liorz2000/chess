@@ -1,11 +1,11 @@
 #include "Tool.h"
 
-Tool::Tool(int x, int y , bool is_white) :
+Tool::Tool(int x, int y , int p) :
 	type("")
 {
 	row = x;
 	colum = y;
-	is_white = true;
+	player = p;
 }
 
 int Tool::getColum() {
@@ -16,8 +16,8 @@ int Tool::getRow() {
 	return row;
 }
 
-bool Tool::getIsWhite() {
-	return is_white;
+int Tool::getPlayer() {
+	return player;
 }
 
 string Tool::getType() {
@@ -27,9 +27,4 @@ string Tool::getType() {
 void Tool::move(int newRow, int newColum) {
 	row = newRow;
 	colum = newColum;
-}
-
-bool Tool::isLegitimateMove(int a, int b)
-{
-	return true;
 }

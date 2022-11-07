@@ -4,18 +4,18 @@ using namespace std;
 
 class Tool
 {
-private:
+protected:
 	string type;
 	int row;
 	int colum;
-	bool is_white;
+	int player;
 public:
-	Tool(int row, int col, bool is_white);
+	Tool(int row, int col, int player = 0);
 	string getType();
 	int getRow();
 	int getColum();
-	bool getIsWhite();
-	virtual bool isLegitimateMove(int row, int col);
+	int getPlayer();
+	bool isLegitimateMove(int row, int col);
 	void move(int row, int col);
 };
 
